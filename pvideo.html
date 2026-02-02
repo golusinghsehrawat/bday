@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Messages For You 🎥</title>
+
+<style>
+body {
+    background: linear-gradient(to bottom, #ffd1dc, #ffe6f0);
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #b30059;
+    margin-top: 40px;
+}
+
+.video-grid {
+    max-width: 900px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.video-card {
+    background: rgba(255,255,255,0.6);
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(255,0,120,0.2);
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.back {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.back a {
+    text-decoration: none;
+    color: #c2185b;
+    font-weight: bold;
+}
+
+.video-card video {
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>My Messages For You ❤️</h1>
+
+<div class="video-grid" id="videos"></div>
+
+<script>
+const videoCount = 35; // change anytime
+
+for (let i = 1; i <= videoCount; i++) {
+    const card = document.createElement("div");
+    card.className = "video-card";
+
+    const video = document.createElement("video");
+    video.src = `pvideos/${i}.mp4`;
+    video.controls = true;
+
+    // 👉 CLICK = FULLSCREEN + PLAY
+    video.addEventListener("click", () => {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen(); // Safari
+        } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen(); // IE
+        }
+        video.play();
+    });
+
+    card.appendChild(video);
+    document.getElementById("videos").appendChild(card);
+}
+</script>
+
+
+<div class="back">
+    <a href="journey.html">⬅ Back to Journey</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Journey ❤️</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffd1dc, #ffe6f0);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 60px auto;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: gold;
+            border-radius: 10px;
+        }
+
+        .event {
+            position: relative;
+            margin-bottom: 60px;
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .event::before {
+            content: "❤️";
+            position: absolute;
+            left: -42px;
+            top: 20px;
+            font-size: 22px;
+        }
+
+        .event h3 {
+            color: #b30059;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event p {
+            color: #3b0030;
+            line-height: 1.7;
+            font-size: 15px;
+            text-align: justify;
+            
+        }
+
+        .video-section video {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.4);
+        }
+
+        .love-letter {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 60px;
+            color: #4a0033;
+            line-height: 1.7;
+        }
+        .memory-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px auto 30px;
+            flex-wrap: wrap;
+        }
+
+        .memory-card {
+            width: 300px;
+            padding: 30px 25px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(255, 0, 128, 0.45);
+        }
+
+        .memory-card h3 {
+            color: #b30059;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .memory-card p {
+            font-size: 14.5px;
+            color: #3b0030;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .memory-card span {
+            color: gold;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #musicBtn {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            z-index: 9999;
+
+            background: #b30059;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(179, 0, 89, 0.45);
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="music/khat.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn">⏸ Pause Music</button>
+
+
+    <div class="main-container">
+        <h1 class="title">Our Beautiful Journey 💑</h1>
+        <h2 class="subtitle">From the First Hello to Forever</h2>
+
+        <div class="timeline">
+            <div class="event">
+                <h3>22 June 2022 - First Day I Met You</h3>
+                <p>Us din pata nahi kya hua tha ki tuma Raunak jabardasti laka aaya tha and ma subha subha khalna ka
+                    liya aaya tha. Tum running karka batha(seat) hua tha then you realied ye to vo ha.</p>
+                <p>Muja abhi bhi yaad tum ider se uder bhag hi raha tha and mara dimag ma bss ye hi aa raha tha ye kya
+                    ho gya ha isko even mara bhi maan tha baat karna ka but janta nahi tha, then seriously batau ma
+                    chata tha tum hamara sath khalo.</p>
+                <p>Phir ham log match katam hona ka baad rasa chadna gya that was the <b>first time jab mana tumse
+                    baat kiya tha.</b>Muja tumara khushi name hi pata tha but then you tell me nahi vo mara gher ka
+                    name ha then you told mara name plash priya ha.</p>
+                <p>Uss time ma kuch baat hi nahi kar paya tha, then jab tumko pull-up karna tha, tumna tumara bhai ko
+                    bola ki chada do then tumara bhai na muja bola and tum dander se khush tha but tumna bola pagal ha.
+                    Uska baad ma gher gya then i search your insta id, and send you the follow request.
+                </p>
+            </div>
+
+            <div class="event">
+                <h3>23 June 2022 - Second Day on Basketball Court</h3>
+                <p>Uss din phir se tum aayi thi and tumna decided kiya tha ma bhi khalugi and mana tumko apni team ma
+                    liya tha. Then khalata-khalata galti se tumara tumb pa ball lag gyi thi pass karta hua and i was
+                    sorry move laga lena 1-2 din ma thik ho jayaga but jada din pain raha tha sorry for that.</p>
+                <p>Then rest karna ka liya jab ham log batha hua tha, you
+                    said muja utha(stand-kar do) do and tumna apna hand aage badaya but mana mara bhai ko bol diya help kar do. And ek
+                    bar phir batha hua tab mana <b>first time tuma touch kiya tha</b>
+                    tumari help ka liya, tab muja laga tha tum mara ko like karta ho but ma sure nahi tha.</p>
+                <p> Then I asked
+                    about your insta id and tumna bataya tha ki ha vo tumari hi id ha.
+                    Then tumna id ko accept kar liya tha.</p>
+                <p> On the same day tumna
+                    apni feelings batai thi and bola tha tum nahi samjoga and mana bola i know tum kya bolana cha raha
+                    ho but muja ek line sunni thi and i said ki ohk but muja time do toda time chaiye, you said ohk but
+                    kitna din, mana bol 3-4 din ma bata hu. And ye sab chiza tumari bhai na dekh
+                    liya and aunty ji ko bata diya and tuma phir mara se milna aa hi nahi payi mana bola tha muja milana
+                    ha but nahi aaya tha.
+                </p>
+            </div>
+
+            <div class="event">
+                <h3>24-25 June 2022 - Time of thinking</h3>
+                <p>Ye 2 din ma bhi soach raha tha kya "Yes" karu ya "No" karu mana logo se bhi puchna ka try kiya tha kaisi
+                    ladki ha and all but uss time sab log busy tha kisi ka koi reply nahi aaya tha
+                    and tumari and mari ek normal baat chalu ho gyi thi. Then tumna bataya ki tumari mom ko pata lag gya
+                    ha and tumna unko bola ha ki ye ladka mara picha laga ha and your mother replied ha bola ya na bola kyu
+                    latka rakha ha.
+                </p>
+            </div>
+
+            <div class="event">
+                <h3>26 June 2022 - Official Starting of relationship</h3>
+                <p>That day i said ohk but abhi feeling nahi ha aager work karta ha lets see and you replied kyu nahi
+                    hoga aager tum toda effort doga to hoga and ma to hu na. And apni bata chalu ho gyi thi and uska baad
+                    ma gher chala gya tha.</p>
+            </div>
+
+            <div class="event">
+                <h3>10 Aug 2022 - My First Birthday with you</h3>
+                <p>Tab tak mana tuma bata diya tha ki 10 aug to manata hu birthday then you plain a surprise jisma
+                    tumna dost se birthday wish karaya tha and ma bhoot khush hua bhoot jada ki kisi na mara liya itna
+                    kuch kiya ha vo mara liya bhoot badi chiz thi.</p>
+            </div>
+
+            <div class="event">
+                <h3>Aug - Oct 2022- Knowing each other</h3>
+                <p>Iss time pa ham logo na baat karna start kiya tha and mana drop le liya tha to subh jata tha raat ma
+                    aata tha jaisa hi gher se niklata tha tumara sath call pa baat chalu and rat ma aata hua call pa baat
+                    karta tha.</p>
+                <p> Mara mobile karab ho gya tha to yash ke mobile se baat karta tha,
+                    even bus ma khada ho kar aana padta tha to bhi mana tumse baat kiya ha but kabhi kuch bola nahi i
+                    know tum bolata ki baad ma kar lena lag jayagi but mara maan hota tha baat karna ki muskil se
+                    pura din ma baat karna ka moka mila tha aasa kaisa jana du and then gher pa ja kar video call karta
+                    tha 1-2 hour,
+                    sab so jata tha, ma kuch nahi bol sakta tha to chat karta tha tum baat karti thi</p>
+                <p> Then mana
+                    try kiya indore chala jau ki baat dang se ho paya then aa jata ha mari ssb ka liya call letter.
+                    Usse phale jab ma up down karta tha coaching ka liya tum mhow aaya tha bhopal se and tum jana wala tha vapas tab
+                    milana tha ham logo ko that was the <b>first meeting after come in relationship</b> and uska liya train
+                    pakadni thi and gher tha dur koi option nahi tha mana gher se nikalta hi running start kiya train
+                    pakadna ka liya and jaisa tesa
+                    ek-ek min dekh kar run karta ja raha thi milana ha and tum papa ka sath tha, call pick nahi kar raha tha
+                    muja samaj hi nhi aa raha konsa coach ma hoga ma dund raha hu then ek coach ma chada and tum dekh
+                    gya ma ja kar bath(seat) gya then jab uncle ji chala gya tum aaya and mara sweat(pasina) pauchna lag gya tha</p>
+                <p> Usse phale dost thi bhoot but 
+                    uss time ma itna gabra raha tha tumara
+                    hand pakadna ma ki kya batau kyuki kabhi kisi to touch tak nahi kiya tha, mana touch karna ka try kiya but tumna muja dekha and mana apna
+                    hand dur kar liya tha then tumna mara hand liya apna kamar pa rakhvaya and we kissed there that was
+                    <b>my first kiss, mari life ki first kiss thi vo.</b>
+                </p>
+            </div>
+
+            <div class="event">
+                <h3>OCT 2022- SSB Training</h3>
+                <p>Delhi gya to ham log aur close aa gya tha kyuki aur jada baat hona lag gyi thi na koi rok-tok thi na
+                    kuch aur. Subh bhi tumse start hoti thi and mari night bhi tum par khatam hoti thi, ma pura rasta mai tumse
+                    baat karta hua jata tha and class ka break ma tuma sabse phale call karta tha and wait karta tha
+                    room jauga and tumse baat karuga</p>
+                <p> 2-4 Hour call pa rahata tha continously and mara ko tumara liya gift lena tha to bhaiya tha jo waha pa
+                    unka sath gya tha ma gift lena dunda tha paisa ki kami thi to jo jitna bhi tha mana hamara liya ek
+                    locket and king and queen ka bracket type ka jo bhi vo liya tha.</p>
+                <p>Ussi time pa tumna mara ko test
+                    karna ka liya kisi ladki se call kara tha,
+                    ki kya bolaga and usna bola tumari coaching ki hu ssb wali ki and mara bare batana lagi and mara reply
+                    tha koi bhi ho, mari gf ha, baat karni ha to bata do, usse hi shaadi karuga and bhaiya tha jo unhone pakad
+                    liya tha ki tumna hi kara tha and then i asked tumna kiya tha you said ha</p>
+                <p>uss time ham log sath ma
+                    MINI MILTIA khalata tha and bhaiya ko hara deta tha,
+                    even jab FREE FIRE khalta tha i was like tuma koi touch nahi kar sakta ha ma hu, mari protection 
+                    karuga.</p>
+                <p>Ussi time pa tumna mara liya <b>first time burger and cock order kiya and mari life ki first
+                    and abhi tak ki last dark chocolate bhi buy karvi thi.</b></p>
+                <p>Then jab vapas aana ka hua mana jan bhuj ka Malva
+                    train ma ticket liya kyuki vo bhopal hoti hui aati thi and tum waha aayi.
+                </p>
+            </div>
+
+            <div class="event">
+                <h3>Nov - Train Journey</h3>
+                <p>Mari uper wali seat thi and ma chata tha ki tum directly uper aa jao and tuma tumara mosa ji chodna aaya hua
+                    tha and unhone tuma tumari seat pa la kar batha diya ki yaha bathana and you were like jaldi se jao and ham log mila then ham
+                    log mila tha tumna muja nicha bula liya then mana bola i want tum uper aa jao, then <b>train mai ham
+                    logo na first time sath ma itna lamba travel kiya tha</b></p>
+                <p>Mana tumara hand ma daga banda tha and uss hand ma jisma married girls bandti ha and you said nahi
+                    aab to isma hi rahane do, sath batha hua tha ek dusara ko chida raha tha and touching and all sab to
+                    chala tha and ma jab tumari t-shirt ma mau diya tha ek chai dena wali bhai chup chap chala gya
+                    tha.</p>
+                <p>Train late ho gyi and ham logo ne bhoot sahi time spend kiya tha. Even kuch aur bhi try kiya
+                    tha then you said aasa nahi hota ha vo sab
+                    and muja first time sperm cramp aaya tha uss din.But vo journey nahi bhul sakta hu ma tumara sath
+                    time spend karna bhoot sari photos li thi.
+                </p>
+            </div>
+
+            <div class="event">
+                <h3>Nov 2022- SSB </h3>
+                <p>Ma SSB ka liya main to khush tha ki mara ko tum se milana ka moka milaga bhopal ma and muja phale pata laga tha ki
+                    bahar ja sakta ha gumna during ssb but due to covid protocol ma bahar aa hi nahi paya tha</p>
+                <p> But mara SSB clear nahi ho paya tha and
+                    train pakadni thi and muja milana bhi tha time kam tha but tumko lag raha tha tumara priods aa jayaga and tum ye
+                    baat na bata kar muja guma rahi thi ki bahar milaga and all muja pata bhi nahi and mara tha nahi yrr
+                    time nahi ha and bahar ma aacha se nahi mil pauga and bss muja tumara sath time spend karna ka aakale ma
+                    and tum believe nahi karoga ma itna hurt tha na mara selection nahi hua but tumse mila tha sab bhul
+                    gya tha </p>
+                <p> Mara tha ki ssb nahi hua to kya hua ye ha mara pas ye mara sath degi life time and uss time pa we tried s** but kuch nahi
+                    hua tumna bataya mara periods aana ka muja lag raha ha ma bola ohk then kuch nahi karta ha we took
+                    photos and ek sath sayanti se lat gya tha plash uss time pa bhi sex was not my periority mara ko bss
+                    tumara sath rahana hota tha tumara sath bhoot comfort milata tha jaan.</p>
+                    <p>
+                    Then train ka liya late ho raha tha bhag kar train jaisa tesa pakadi general daba ma gya first time
+                    without ticket and uska baad tumna bataya ki mara jata hi gher tak tum gya ho and you got yours
+                    periods.
+                    Ma rat ma gher pauchta hu pura aasa tha ki aab to jauga hi nahi army ma mara ko kaisa nikal diya and
+                    all and next day mara ko phir room dekhna jana tha indore for my coaching class.
+                </p>
+            </div>
+
+            <div class="event">
+                <h3>Nov - Dec 2022- After SSB and my Coaching time</h3>
+                <p>Uska baad coaching ma gya hu half se jada syllabus ho gya ha and then JEE Mains jo April ma hona wala
+                    tha Jan ma
+                    ho raha tha and sab mara ko aasa lagna laga tha ki aab to kuch nahi hoga mara and i was just doing
+                    overthinking and pura depressed tha but tum mara sahara bana tha plash and mana uss time pa tuma dur
+                    karna ka
+                    try kiya tha and tum nahi gya tha tab mana bola tha plash ki aab kabhi mat jana jaan kuch bhi ho
+                    jaya</p>
+                <p> mara ko
+                    kabhi mat chodna abhi ma kuch nahi hu kya pata kuch kar bhi na pau
+                    future ma then you replied ki, muja pata ha tum kar loga and ma kabhi dur nahi jaugi tum diyan do and
+                    i cried
+                    <b>first time in front of you </b>even ma kisi ka samana nahi roya tha you were the first person jiska
+                    samna ma roya
+                    tha and tumna bola tu aage bado ma hu tumara pas that day muja laga tha aab tum kahi nahi jaoga muja
+                    apna future
+                    bana ha taki dono ka sapna pura ho saka. </p>
+                <p>Then ham dono ka ye hi tha ki physical hoga to ek sath hoga
+                    kisi aur ka
+                    sath nahi then mara clear tha i don't want to loose you and
+                    we plain milana ka and jis din tum aana wala tha indore, mara ko pata hi nahi tha kaha kya ha subha
+                    coaching
+                    jata tha raat ma andera ho jata tha tab niklata tha and then raat ma tumse baat hoti and subha and break ma todi
+                    der</p>
+                <p> Ha jab
+                    tum aana wala tha pata hi nahi muja kaha aayagi bus to phale muja bataya gya yaha chock pa aa jao tumara
+                    sath koi
+                    didi tha then ma waha gya then unhone bola ki dusari side pa nikalta ha rasta waha aa jao uss time
+                    muja nahi
+                    pata tha ki jaha ma hu uss road se bhi ja satka ha, mara bag ma kam-se-kam 5-7kg weight tha
+                    uss time pa books, ma waha se bhaga hu ki tuja wait na karna pada and ma continously tera sath call
+                    pa tha pura
+                    gumka hospital ka pass se, phir jaha tum tha waha tak run karka aaya tha but jaisa hi tumako dekha tha na
+                    plash sab
+                    chiz bhul gya </p>
+                <p> Hamne bhoot tight hug kiya then tumara hath pakad ka ma tuma shop pa le kar gya tha and said
+                    jo tuma
+                    chaiye lelo then tumna bola tha condom mai hi laoga tum nahi lana wala uss din and shop pas ma hi thi ma gya dira dira
+                    and then le
+                    kar aaya and auto book kiya tha waha se we went to hotel and gher pa baat kiya tha and then tumna
+                    mari
+                    photo li thi condom ka sath and ham logo na ek bar try kiya tha ho nahi raha tha but ek bari
+                    hona wala
+                    tha, tumna bola bahut pain ho raha ha then i said nahi karta ha bss ho gya then ham logo ne baat ki,
+                    mobile ma reels dekha, movie clips
+                    dekha and hug karka ek sath so gya tha <b>first night jo ham logo ne sath ma spend kiya tha </b>
+                <p> Subha ma jab
+                    nahane gya tha
+                    ham logo ko nahi pata tha ki jo shower ha usma phale cold and then hot water aata ha phale cold aaya to
+                    tumaha to
+                    sahi laga tha and bath liya then jab hot aaya then ma tumara samana stand kiya ki tumako ko hot
+                    water na laga
+                    and uss chakar ma mari back and mara hand red ho gya tha tumna bola pagal ho mana bola tha koi nahi
+                    ma naha lata
+                    hu itna ma, sach to ye plash mara ko uss time pa bhoot hot pani laga tha and pain bhi hua tha but
+                    mara ko waha se
+                    hatna nahi tha ki tuma hot water na lag jaya. </p>
+                <p> Then tumko subh subh chodna gya tha auto ma tuma train
+                    ma chada
+                    kar then jab train chali gyi ma coaching gya bhoot bura lag raha tha jaan bhoot jada but mara ye tha
+                    ki mahanet
+                    kar lata hu baad ma sath rahaga hi ye to kahi nahi jayagi har bar mana ye hi soach tha. </p>
+            </div>
+
+            <div class="event">
+                <h3>Jan 2023 - Parents get to know about my insta id</h3>
+                <p>Uss din pata nahi kya hua tha and ma gher chala gya tha ek dum se and uss din muja nahi pata tha ki
+                    rinku pakada gya ha, insta use karta hu and unhone puch liya, then mana unko jhoot bhi nhi bola, i said ha hai ek ladki
+                    plash priya name and sab bataya, and then unhone mara tab le liya tha and keypad mobile diya tha
+                    use karna ka liya. Then jab ma vapas aa raha tha tab mana tumko call kiya and bataya ye sab hua ha tab tumara
+                    maan ma tha ye bhi chod ka chala jayaga and mana bola plash ho sakta ha kuch din baat na ho but ma
+                    tumse baat karuga
+                    and kahi nahi ja raha hu ma tumara hi pas rahuga, becoz i trusted you ki kuch bhi ho jaya tum muja
+                    nahi chodoga.</p>
+                <p> Then mara liya kisi aur ka koi decision mayana nahi rakhta tha vo mara decision and ma
+                    uss decision ka liya kuch bhi kar sakta hu mara clear tha. Then uska kuch time baad mana tumako
+                    bataya tha ki, logo na bola ha tum sahi ladki nahi ho and tuma name bhi bataya tha shristi ka
+                    then tumna number maga usko call and uski aasi tesi kar di tumna and jab shristi na bola ki omesh bata do isko ki ham
+                    logo ki 8 saal ki dosti
+                    iska 2 month ka pyar se jada jaruri ha and then i replied ki plash to rahagi,
+                    tuma jana ha to chali jao.
+                </p>
+
+            </div>
+            <div class="event">
+                <h3>March 2023 - When I came to Bhopal</h3>
+                <h3>Day 1</h3>
+                <p>Tum sayad believe nahi karogi plash tumara pas aana se phale ma pagal gya tha ki uska pas jauga and
+                    har roj plan karta tha ek ek chiz kaisa jana kitna time and all, isliya shresth abhi bhi bolata
+                    tha kyu bhopal nahi jana.</p>
+                <p>Tumse milana aana ka liya ma, apna kamara ki window se khudna wala tha and aana ka liya jaldi
+                    nikalna tha to ma 4 baja hi jag gya tha bath le kar ready ho gya tha and bas 5 baja ka wait tha, kab
+                    nicha wala gate khula and jauga, then jab gate open hua phale mana shresth ko baja tha, dekh kar aa sab sahi ha ki nahi,
+                    then ma gya then usse bag nich fakwaya window se, then ma wall khud kar nikala bahar then ye tha late
+                    na ho jau padal padal bus stand gya tha ki late nahi hona and all usse phale ticket tumna bhej diya
+                    tha uska print la liya tha,
+                    then jaisa hi gya hu mari dharkan uper-nicha ho gyi koi aaya nahi and i was waiting there, that was the <b>first time jab ma gher pa kisi ko kuch
+                    bhi na bata kar, tumse se milana aa raha tha.</b> ye hi dar tha ki koi call na kar le but keypad phone tha
+                    to koi video call nahi karta, isliya tha ki call na aaya and ma tera ko time-time pa bata
+                    ja raha tha, yaha aa gya hu yaha aa gya hu</p>
+                <p> Jab ma pauchta hu to tum muja nahi milata ho and you
+                    can't belive meri bhaut jada fati hui thi ki call aa gya to kya hi karuga, ma to janta bhi konsi jaga
+                    and kaha jana ha and mana tuma
+                    uss time pa bola nahi tha but ma har bar tuma kaha puch gya isliya bata tha, ki tum mara ko receive karna ka liya
+                    present hogi, seriously plash mara ye tha ki ma pauchu to tum waha hogi and ma
+                    utera hi tuma hug kar lu ye chata tha ma, ki ma 5 baja ka travel kar raha hu atleast itna to kar hi
+                    sakti ha vo, but tum nahi mila tha bhaut bura laga tha and ma naraj ho gya tha and tum uska baad bhi
+                    20-25 min ma aaya tha</p>
+                <p>Then jaisa hi tumko mana deka tha mara gussa katam ho gya tha aager yaad ho
+                    to, you said sorry mana bola koi nahi chalo aab
+                    and then ham log padal-padal gya, pahale to tumara hostel gya tha pani lena and bag lena tumara
+                    then hotel gya the, mana tumara hath pakada tha and room jata hi hug kiya tha bhaut jhoot jor se, garmi thi and muja uss
+                    time bhi sperm cramp aa gya tha.</p>
+                <p> Then phale to mana aunty se baat ki vo haryana ja rahi thi and then
+                    tumna mara liya maggie bani thi, usma itni mirchi thi na ki mara mau jal gya tha and you kissed me
+                    and bola kam hua kya, then ma khata tha and you kissed me, phir tumna bola chod do isko and bola nahi
+                    payar se bani, you said koi nahi then tumna vo kha li thi.</p>
+                <p> Ham logo ne phir se try kiya tha, and mana finguring ma 3 fingure use kar liya tha tumko bhoot
+                    pan hua tha and mara ko apna aap pa itna gussa ayaa ki kya batau and i said sorry sorry plash mar lo
+                    mara ko, sorry ma phir kuch nahi karuga. Then you said koi nahi lets try out and uss chakar ma we did
+                    our <b>first sex</b>, blood nahi aaya tha tumna bola aasa kaisa ho sakta ha and you asked tumko mara pa
+                    sak nahi hua and then i replied koi nahi i trust you, usma kya vo to running ka time ma tut gya hoga
+                    usse ye sab define nahi hota ha and then ham logo pata laga tha ki
+                    vo kam kambal pa lag gya tha.</p>
+                <p> After that we take rest and movie dekhi then sayam ko ham log bahar
+                    gya tha khana khane uss time pa tumari dost bhi aayi thi name yaad nahi ha, then ham logo na momos
+                    khaya tha and chaumin liya tha and vo khaya nahi gya tha jada mirchi thi, to pack kara liya tha raat
+                    ka liya,uska baad ek dog dekh gya tha samna hi, tuma pata tha muja dar lagta ha dogs se and i know tumko
+                    bhi lagta ha dar but to bhi tum mara samna aa gya ma tumko side kar raha hu, tum mara ko side kar
+                    raha ho. Then ham logo ne Ice-Cream liya and jata jata gher(House) dekha tha ki konsa
+                    banvana ha ham logo ko after marriage.</p>
+                <p> Tumako kuch lena tha hostel ka room se,
+                    tum vo lena chali gyi thi and bolana ki masi ka yaha ja rahi hu, then tum aaya
+                    tha usse phale mana gher pa baat kr li thi and tumna chadar bacha kar baat ki thi, pata na laga gher
+                    walo ko and uska baad ham log rat ko kuch kahane ka liya gya tha todi der ka liya but vapas aa gya
+                    tha then tum thak gya tha to sona chala gya muja nid aa nahi rahi thi ma mini militia khal raha tha
+                    tumara phone ma and then bhook lagi, tovo chomin khana laga to marchi lag gyi thi
+                    tumna dekh ma pani pi raha hu tumana mara ko apna pas bulaya and phale to phone liya and bola aab
+                    yaha aao and chup-chap so jao and then ma so gya tha. </p>
+                    <h3>Day-2</h3>
+                <p> Next day ham log jagta ha phale to parta
+                    laka aaya and then dahi. Phir room pa aa kar tumna mara lap par baad kar muja apna hatao se bhaut
+                    payar se khilaya tha. Mana apna hatao se tumko khilaya. Uss din ham logo ne sath brush kiya tha and
+                    bath liya tha.</p>
+                <p> Uska baad tumna sarri phani thi, which triggered a lot and vo to tumko bhoot pasand
+                    aaya tha. Then sayam ko gumna jana tha usko liya tum toda rest karka ready hona chala
+                    gya tha and then tum vapas aata ho to reception wala uper nahi aana de raha tha, to tumna bola tha vo
+                    ladki ma hi hu and tum suit ma bhaut aacha lag raha tha then ham log Lake View dekhna gya tha and uska bus liya tha, waha
+                    gya tha to ma sarma raha tha, then ham log sath ma guma waha par then tumna bola tha muja gola khana
+                    ha and tumari dost na bola nahi dila isko mana bola tha cholo batao konsa khana ha, and ek potato ka
+                    kuch tha vo liya tha(sorry name nahi pata) then ham dono ne usko ek bench par ek sath khaya tha, uska baad
+                    barish hona lagi thi, yaad hoga ek hi seat and waha par pani tha, tumna muja ander kiya
+                    and bola toda ider hi raho pani ha and tum kinara pa tha to mana tuma tumari kamar se pakada hua tha,
+                    kahi gir na jao.</p>
+                <p> Ma bol raha tha plash direct room chalo bahari hogi and tum nahi aa paoga but
+                    tumna nahi sunna and tum room chala gya then baharish hona lag gyi thi and muja nahi pata tha tumko
+                    bijali se dar lagta ha and ma bol raha tha aa jao jaldi then tum chata la kar aaya tha and ma tumko
+                    lena ka liya hotel se nikal gya tha but tum mara ko rasta ma mil gya tha then vapas aaya ham log,
+                    then mana bola tha chalo nahata ha barish ma but tumna mana kar diya, then mana bola tha ki
+                    chalo kuch kahna chalata ha, chata bhi ha tumna mana kar diya and mana jid ki ma ja raha hu tumna
+                    mara shoes chupa diya and bola jao mana tumari chapal pahen kar jana laga tha but then ruk gya then
+                    tumna muja bataya tha ki tumara nana ji ki death aasa hi mosam ma hui thi, then mana sorry bola tha and
+                    tumna bola nahi chata ma kisi aur ko khona then barish band hona ka baad ham log khana gya tha and
+                    then vapas aaya and then so gya tha uss </p>
+                    <h3>Day-3</h3>
+                    <p>next day mara ko jana tha and muja bhoot bura lag raha tha
+                    nahi jana chata tha ma but i know tum khud nahi jana de cha rahi thi so mana kuch nahi bola
+                    becoz ma aager uss time pa aasa kar deta to tum tut jati, vo ma nahi chata tha karna but dil ma bss
+                    ye tha ki nahi jana nahi jana, phir kab aasa moka milaga nahi pata tha. Tum mujko chod kar aaya tha
+                    and tum bhaut thak chuki.<p>
+
+                    <p> Un 3 din ka time pa ham logo ne photos liya tha tuma apna arms ma le kar photo
+                    liya tha and tumara par dabaya tha and tumna muja baad ma puch tha tumna mara par kyu dabaya mana
+                    bola usma kya ha tuma pain ha ma itna to kar hi sakta hu and even during sex ma tumara diyan rakhta
+                    tha kahi kuch ho na jaya.
+                </p>
+
+            </div>
+            <div class="event">
+                <h3>April 2023 - After JEE Mains</h3>
+                <p>Mari bhoot tabiyat karab ho jati ha and ussi time pa tuma bhi kuch pata lagta ha tumha lagta ha
+                    omesh mara diyan nahi rakh raha ha but plash sayad tuma pata ha ki nahi, tuma trust na ho to shresth
+                    se bhi puch sakta ho ma ek bar rat ma washroom gya tha and mari itni tabiyat karab thi ki, jitni mari
+                    height ha tuna picha aa kar ma wall ma takra gya tha and itni jor se aavaj hui ki jo ham logo ka
+                    room tha vo dur hi tha and usko sunna ki ma gir gya hu, vo phale muja strees pa dekhna gya tha, itni
+                    aavaj hui thi, usko laga kahi nicha to nahi gir gya and then uss na dekha ki ma, lata hua hu na bol pa raha hu
+                    na khada ho pa raha hu and uss halat ma pata nhi kitni din waha tha, fever aata and then chala jata
+                    tha and muja sach ma nahi pata tha tumra sath kya ho raha ha and na tuma pata tha, tumha ye tha bss
+                    ki ma bimar hu and then ma mhow gya hu, kisi aur ka card pa admit hua hu hospital mai 2 din admit raha tha, then toda
+                    chal paya tha and then mari baat hui tumse jaisa hi kuch pata laga, tab muja pata laga ki mara hi
+                    dost ye bol raha ki, omesh ko chod do and all then mana tumse puch tha, tumna mara sath diya and then
+                    mana bhi jada nahi bataya tha tumko kya hua ha muja kya nahi.</p>
+                    <p>
+                    Then jab ma thik ho kar gher ja raha tumse station pa mila tha and muja ander se itna bura lag raha
+                    tha kya hi batau plash bhoot jada. Then tumko chips dilaya tha tum toda khush hua tha-Sorry plash so
+                    sorrry ma uss time kuch nahi kar paya tha.
+                </p>
+
+            </div>
+            <div class="event">
+                <h3>27-28 May 2023 - I came to Indore for exam And also you came to meet me</h3>
+                <p>Sayad yaad hoga uss time pa ma exam dena indore aaya tha and then tum bhi aana wala tha, uska baad
+                    jaisa hi ma pucha tha sab ko call kiya but ha waha se Neogo ka stoppage dur that kafi dur,
+                    then mara ko kuch special bhi karna tha mara pas itna paisa bhi nahi tha uss time pe, then ma flower
+                    khojana gya tha ki mil jaya but nahi mila tha, then ma jo flower chadata ha vo la kar aaya tha then
+                    vapas gya tha
+                    condom lena, jisko dekh kar tum dar gyi thi.</p>
+                <p> Waha se 5-7km ka hi rasta hoga mana soach jaldi
+                    pauch jauga and tumse call pa baat kiya tunma bola ki ma to aana wali hu, waha se mana run kar diya
+                    chalo tumse phale
+                    pauchana, so that jab tum aao muja waha khada pao, but ek to garmi ka time then map bhi pura guma
+                    raha tha uss din ma kam se kam 45-50 min chala tha then tumari bus late ho gyi thi todi
+                    to ma jaldi se pauch kar
+                    seat kar liya tha 10-15 min baad tum aaya tha, then we went to the room and tuma bhi ye tha koi
+                    tumko dekh na le pachan na le, then room ma gya ek dusara ko jor se hug kiya and kahana khaya ma
+                    churma laya tha tumara liya even
+                    lassi bhi laya tha but tumko pasand nahi tha.</p>
+                <p> Then mana jab tumko ko flower diya, ek paper ma sab ko
+                    rakh ka ki bouquet ka ho jaya tum has diya and mara ko gala se laga liya tha, then ham logo na
+                    horror movie dekhi thi, even
+                    tab tum muja bata raha tha ki lata-lata bhi kaisa kar sakta ha s** and all. Then jab ham logo ka mood
+                    ban gya tha tabhi call aata ha and ma ulti sidhi lower pahen ka bahar bhagta hu pata na lag jaya and
+                    tum mara picha picha</p>
+                <p>
+                    ma itna gabra gya tha ki, i was shivering and tumna muja apna gala se laga liya and mara back rub
+                    kiya and bola ma hu tension mat lo kuch nahi hoga, sab thik ha and that day ham logo ne bhoot masti
+                    bhi ki, uska baad jab sona gya tha,
+                    ek dusara ko ek dum tight hug karka so gya, subh bhi jaga to apna face ek dusara ka samana tha and
+                    eyes open karta we were like love you baby and we kissed each other. </p>
+                <p>Then sath ma gya tum bus ka
+                    liya and ma exam center pa ek hi
+                    bike pa. That day was bhoot sahi tha yrr. And jata jata tumna bola tha mana tumara bday gift de diya
+                    ha. Plash tum mari jaan ho yrr seriously I love you I love you a lot jitna tum soach bhi nahi sakta
+                    ho
+                </p>
+
+            </div>
+            <div class="event">
+                <h3>May 2023 and 2024 - After JEE Result and College Seaching</h3>
+                <p>Jab result aaya, and mara result aacha nahi tha, bhoot hanga hua gher pa sab log be like aab kya hoga and mara dimag ma
+                    clear ye baat mana tuma bhi nahi batai thi plash ki bahar rahana ha, then
+                    indore ma bhi college that but nahi lena ha then mara tha ya to bhopal ma le luga ya aas pas ki jada
+                    dur na jau and aager aacha college mila to waha luga tumaha pata ho to ma delhi ka bol raha tha bar
+                    bar uska reason bss itna tha, tumara tha ki tumha delhi shift hona ha kaisa bhi, to mara tha delhi le
+                    leta hu vo delhi aayagi hi,
+                    then sab sahi rahaga and ye ma aab baat nahi bana raha hu jaan ye sab sach ha teri kasam kha kar bol
+                    raha hu ye sab tha. </p>
+                <p> Then koi itna dang ka college nahi mil raha tha, milta last ma but vo hi gher walo ko kuch samaj
+                    aana ha nahi, bss kara do kara do verna issa aacha college ma hota muja ye pata ha and then muja
+                    tumara as-pas rahana tha to ye college dunda tha but nahi pata tha itni bakar jaga hogi.Then ye
+                    pata laga ki sala choti ka liya bhi gher pa call karao and sab karo muja sach ma bhoot bura laga tha
+                    plash and i feel jo chata tha vo nahi hua
+                    and ye sab sach ha and irritate hoga tha pura ek to gher walo ka, kahi na kahi tana and mana
+                    apna aap ko bhoot kam samaj liya tha and then mara dimag ma hamasa se ye hi tha plash ki tumna mara
+                    pa itna trust karka aaya ho, to tumara trust nhi tutna dana tum itna sab kar raha ho to i don't want you
+                    to let down even so isliya ma itna late tak kam karta tha</p>
+                <p> even 1 year jada kam tha bhi plash mana 3
+                    baja tak file likhi ha apni itna jada kam hota tha but mana kabhi nahi bola, and mana call pa raha kar kam karta tha
+                    then vo ek habit se ho gyi thi and then mara ko pata hota tha ki aager ma baat karna jauga, to uska
+                    baad so hi jauga kam nahi hoga, isliya phale work complete karna ka soachta tha and ye to tum bhi
+                    manti hogi uss time pa tum bhi bhoot jada baat karti, har time call karta yaad ho to. And usska baad
+                    ham log 1 year ka baad mila tha pura ek saal ho gya tha</p>
+                <p> plash sayad ye
+                    mari soach galat hogi tab tak muja lagna lag gya tha ki tum dur bhi rahti ho sab ha and log bolata
+                    ha ki aager ladki tumse khush nahi rhati to vo chod deti ha
+                    isliya ma kuch na kuch soachta tha karna ka and ham log mil hi raat ma pata tha, kuch time ka liya and
+                    uss time ma ya to ham log baat kar sakta and todi musti and sex ho jata tha then mara ye rahata tha
+                    aasa kya karu usma jo tumko aacha laga isliya ma itna vo sab soachna lagta and har bar kuch naya
+                    soachta and puchata tha aacha laga ki nahi and muja nahi pata tha vo sab hurt kar raha hoga plash
+                    sach ma isliya sab karta tha yrr mari tharak nahi thi vo - aager tum bolata hat mat lagao ma hat tak
+                    nahi lagta jaan.
+                    Toda bhoot mil liya baat kar liya ye hi chalta tha.
+                </p>
+
+            </div>
+            <div class="event">
+                <h3>Jan 2025- I cam to Bhopal to Meet You </h3>
+                <p>Uss time pa toda jada time mila tha ham logo ko and uss time pa bhi ma chata tha ki tum mara ko
+                    receive karna pauch jao and late nahi tha uss din plash 7-8 pm ka bich ka hi time tha but uss din
+                    bhi tumna late kar diya and muja sach ma bura laga but uss din bhi tumko dekh kar ma chup ho gya and
+                    mana bola bhoot aacha lag raha ho. </p>
+                <p>Phale ham logo ne apna saman rakha room pa gya then scooty se tumara
+                    dosto se milana gya waha pa tumna mara hand ko apna leg pa rakhna ka bola tha then phir room gya
+                    gher pa baat ki mana, phir tumko gher pa baat karni thi, to tumna scooty chali thi and ma picha bada
+                    hua tha tum room gya and baat kiya tumna, then ham log dosa khana gya and pizza pack karka ka liya
+                    tha</p>
+                <p> Uska baad room pa gya then sex kiya and bata ki and i remember tumna kya bola tha <b>Mana omesh tumahe sab de diya ha
+                    aab chaud ka mat jana and  said ma tumha bhi nahi jana duga aager tum ja raha hoga to,
+                </b> i think jo ham logo na subha sex kiya tha,
+                    i think uss time pa jaisa mana kiya tha vo tumko pasand nahi aaya tha(sorry plash so sorry for that)
+                    muja nahi pata laga tha then ham log hug karka so gya tha subha jaga, i know tumara exam tha and mara
+                    maan tha karna ka but mana kaha nahi pain hoga, tum exam de kar aao and then ham log gya dosa khaya and as
+                    always bhawan ji ka samna hat joda and sab kiya.</p>
+                <p>
+                    And ma isliya chata tha tum receive karna ka liya khada ho kyuki aager yaad ho to ma 5-7km chal kar
+                    aaya tha tumara pauchana se phale vo chal kar nahi run karka aaya tha kahi se leaft le kar aaya and
+                    pata nahi kya kya. So muja bss ek bar ka liya chaiye tha ki tum muja receive karna ka liya
+                    phale se waha ho and ma uterta hi tumko hug kar lu really i want to do a hug jaisa hi pauch jau but
+                    uska baad bhi tum dang se hug nahi karta tha ek chota sa hug and then chalo but ye sab kabhi nahi
+                    bola, muja tera ko hurt nahi karna tha kabhi bhi isliya,
+                    ma kabhi kuch nahi bolata tha.Kahi tuma koi chiz buri na lag jaya.
+                </p>
+
+            </div>
+            <div class="event">
+                <h3>Feb 2025- Tum JUET aaya</h3>
+                <p>Tum aana wala tha tumari entry ka liya Priyanka ko bola tha already, then tumko college gumaya then
+                    ham log mandir gya tha were we <b>engaged</b>
+                    and then mana tumko apna sab dosto se milvaya tha, unka liya ham logo ne Ice-Cream liya, then jab
+                    khana khane bahar ja raha tha, tumara liya ek rose liya tha mana and knee down karka tuma vo rose diya
+                    tha and tumna bola koi dekh lega.</p>
+                <p> Then ma room gya id-card laya then ham log Hotel gya khana khane waha pa tumna rice and daal hi
+                    order kiya and mana nan and paneer, photos liya ham logo ne then bahar jhula pa batha and mana tumse
+                    puch tha padal chala kya
+                    muja tumara sath gumna ha, you replied yes, then ham log padal padal ja rha tha, tum gussa ho gyi,
+                    tumara par ma hill lag rahi thi, mana bola tha tuma apna back pa bada lata hu you said No, and gussa
+                    ho gyi then ham logo na ice-cream khai then college gya</p>
+                <p>Plash i know tumko lag raha hoga sab dekh raha ha plash yaha mara ko janta tha sab log tumko and
+                    mara ko kisi se koi farak nahi padta yaha sab hota rahata ha and rahi baat gussa ki, ma isliya nahi hua
+                    tha ki tumna no bola kiss ka liya, and tum phale bolta ohk and then mana kar de raha tha
+                    and maan gussa iss chiz ka tha plash mana vo khana jada paisa tha ka nahi tha, but mana vo tumara
+                    liya really bhoot dil se kiya tha bhoot jada, ki ye mara side le kar ja rahi ha kuch but tumna usko
+                    fak diya tha, uss chiz pa gussa aaya tha and ma tera saath
+                    iss chiz pa bahas nahi chata tha and sab to ma chup ho jata hua and sach ma muja tumse jit kar kuch
+                    nahi milaga and kisi bhi argument ma ek insaan aager chup ho jaya to vo wahi katam ho jayagi.
+                </p>
+
+            </div>
+            <div class="event">
+                <h3>After Feb 2025 - Ulta Din Chalu</h3>
+                <p>Muja nahi pata tha tumara dimag ma kya chal raha plash mara side se ye hi chiz thi starting se bola
+                    tha kabhi jhoot mat bolana and tum bahar gya tha and tumna jhoot bola tha about a boy, chaiye vo
+                    tumara bhai hi kyu na tha but tuma bola tha
+                    jis baat ka bhoot bura laga tha, muja isliya ma har bar ussi chiz ka tana ka chakar ma puch lata tha,
+                    ladka to hoga hi and vo chiz sach hi nikalti thi plash and uss time pa tum bhi chiza clear na karka
+                    bahas karta tha. Then mara exams then vo hi 2 month ki chotiya
+                    and plash i know ma tumse call pa baat nahi kar pata tha college ki tera but tum ek bar khud sochna
+                    college ma jitni baat karta tha uss jada ma tera se baat karta rahata tha msg pa ya video call chal
+                    raha ha chat pa bol raha hu manta hu uss chiz se
+                    utna satisfication nahi aata hoga but time to ma jada hi deta tha plash tum ye maan lo sayam ma
+                    8-9pm ka baad se 12-1am tak baat karta tha vaisa hi, aager purani chat ho to dekh sakta ho.
+                    And jo 3 din ham logo na phale jiya tha vo hi karan tha muja 22 July 2025 ma isliya milana aa raha
+                    tha, i know mana tumko bola tha aasa sex karna and all but plash sach to kuch aur tha and vo tum aab
+                    mano bhi nahi ga sayad aab to but bata deta hu mana ek
+                    fundoor dekha tha jaha mara ko tera sath jana tha and then muja ussi lake pa phir se jana tha tumara
+                    sath, then jo tumna bola tha ek bar bahar dinner karna jana tha and ek bar trekking pa jana tha tera
+                    sath ye sab muja kara tha uss time pa mana saoch hua tha
+                    and mara tha ye sab ko usko surprise duga but muja nahi pata aasa kuch chal raha hoga tumara dimag
+                    ma tumna koi hint hi nahi di thi jaan, jab mana bola tha ki dur ho jaya tumna bola tha aasa mat bola
+                    muja nahi hona then muja laga tha nahi ye dur nahi jayagi sach ma
+                    ye hi laga tha, seriously nahi pata tha jaan ma phale hi mana leta tera ko ek bar baat to karka deti
+                    and itna sab jo hua ma bss tujse issi chiz ka liya time mag raha tha plash ki ek bar mari baat to
+                    sunn lo but tum sunna hi nahi cha raha tha to muja tum bhoot dur jata hua
+                    dikh rha tha isliya ye sab kiya tha aager phale lagta to ma phale hi kar leta plash sach bol raha
+                    hu.
+                </p>
+
+            </div>
+        </div>
+        <div class="memory-cards">
+            <div class="memory-card" onclick="location.href='memories.html'">
+                <h3>📸 Our Memories</h3>
+                <p>
+                    Har tasveer ek kahani hai,<br>
+                    har muskaan ek yaad 💖
+                </p>
+                <span>View Memories →</span>
+            </div>
+
+            <div class="memory-card" onclick="location.href='pvideo.html'">
+                <h3>🎥 My Messages</h3>
+                <p>
+                    Kuch baatein jo sirf tumhare liye hain,<br>
+                    dil se dil tak ❤️
+                </p>
+                <span>Watch Videos →</span>
+            </div>
+        </div>
+
+
+        <div class="love-letter">
+            <h2>My Heart To You 💌</h2>
+
+            <iframe 
+                src="letters/love-letter.pdf"
+                width="100%"
+                height="600px"
+                style="border:none; border-radius:16px; box-shadow:0 10px 25px rgba(255,0,120,0.25);">
+            </iframe>
+
+            <p style="text-align:center; margin-top:15px;">
+                <a href="letters/love-letter.pdf" target="_blank" style="color:#c2185b; font-weight:bold;">
+                    📄 Open Letter in Full Screen
+                </a>
+            </p>
+        </div>
+
+        <footer>
+            <br>
+            <a href="index.html" style="color:gold;">⬅ Back to Home</a>
+        </footer>
+    </div>
+    <script>
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let musicStarted = false;
+
+// ▶️ Start music on FIRST click anywhere
+document.addEventListener("click", function () {
+    if (!musicStarted) {
+        music.play().catch(() => {});
+        musicStarted = true;
+    }
+}, { once: true });
+
+// ⏸ Manual Play / Pause button
+musicBtn.addEventListener("click", function (e) {
+    e.stopPropagation(); // prevent re-triggering start click
+
+    if (music.paused) {
+        music.play();
+        musicBtn.innerText = "⏸ Pause Music";
+    } else {
+        music.pause();
+        musicBtn.innerText = "▶️ Play Music";
+    }
+});
+</script>
+
+
+</body>
+
+</html>

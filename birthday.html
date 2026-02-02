@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Plash Priya Singh 🎂</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #ffd1dc, #ffb6c1);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        audio {
+            display: none;
+        }
+
+        .main-container {
+            background: rgba(255, 255, 255, 0.85);
+            max-width: 900px;
+            width: 90%;
+            padding: 40px 30px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 42px;
+            color: #e6005c;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 26px;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .video-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .video-box video {
+            width: 320px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .message-box {
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #e6005c;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 32px;
+            }
+
+            .video-box video {
+                width: 100%;
+            }
+        }
+
+        #musicBtn {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            z-index: 9999;
+
+            background: #e6005c;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(230, 0, 92, 0.45);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        #musicBtn:hover {
+            background: #c4004d;
+            transform: scale(1.05);
+        }
+        @media (max-width: 600px) {
+            #musicBtn {
+                top: 10px;
+                right: 10px;
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="music/bday.mp3" type="audio/mpeg">
+</audio>
+
+<div class="main-container">
+    <h1 class="title">Happy Birthday My Love ❤️</h1>
+    <h2 class="subtitle">Plash Priya Singh</h2>
+    <p class="date">2 February 2003</p>
+
+    <div class="video-box">
+        <video controls width="70%">
+            <source src="videos/bday.mp4" type="video/mp4">
+            Your browser does not support the video.
+        </video>
+    </div>
+    <button id="musicBtn" >🔊 Music</button>
+
+
+    <div class="message-box">
+        <p>
+            My Dearest Priya 💖,<br><br>
+
+            Tum meri zindagi ka sabse khoobsurat hissa ho.  
+            Tumhari muskaan meri duniya roshan kar deti hai,  
+            aur tumhari awaaz mere dil ko sukoon deti hai.  
+            Aaj tumhara birthday hai, par gift toh mujhe mila hai —  
+            tum jaisi pyaari, strong aur royal ladki meri life mein aayi ❤️<br><br>
+
+            I wish ki tumhara har sapna poora ho,  
+            tum hamesha aise hi khush raho, chamakti raho,  
+            aur main hamesha tumhare saath khada rahun —  
+            har smile mein, har problem mein, har future mein 💑<br><br>
+
+            Happy Birthday My Queen 👑  
+            I love you more than words can ever say.  
+        </p>
+    </div>
+
+    <footer>
+        <p>Forever Yours, <br> — Omesh Sehrawat 💌</p>
+        <br>
+        <a href="index.html" style="color:gold;">⬅ Back to Home</a>
+    </footer>
+</div>
+
+<script>
+const music = document.getElementById("bgMusic");
+const video = document.querySelector(".video-box video");
+const musicBtn = document.getElementById("musicBtn");
+
+let hasStarted = false;
+
+// 👉 First click anywhere starts music
+function startMusicOnce() {
+    if (!hasStarted) {
+        music.play().catch(() => {});
+        musicBtn.innerText = "🔊 Pause Music";
+        hasStarted = true;
+    }
+}
+
+document.addEventListener("click", startMusicOnce, { once: true });
+
+// 👉 Button toggle (after music has started)
+musicBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent re-triggering page click
+
+    if (!hasStarted) {
+        music.play().catch(() => {});
+        musicBtn.innerText = "🔊 Pause Music";
+        hasStarted = true;
+        return;
+    }
+
+    if (music.paused) {
+        music.play();
+        musicBtn.innerText = "🔊 Pause Music";
+    } else {
+        music.pause();
+        musicBtn.innerText = "▶️ Play Music";
+    }
+});
+
+// 👉 Pause music when video plays
+video.addEventListener("play", () => {
+    if (!music.paused) {
+        music.pause();
+        musicBtn.innerText = "▶️ Play Music";
+    }
+});
+
+// 👉 Resume music when video pauses or ends
+video.addEventListener("pause", () => {
+    if (hasStarted) {
+        music.play().catch(() => {});
+        musicBtn.innerText = "🔊 Pause Music";
+    }
+});
+
+video.addEventListener("ended", () => {
+    if (hasStarted) {
+        music.play().catch(() => {});
+        musicBtn.innerText = "🔊 Pause Music";
+    }
+});
+</script>
+
+
+</body>
+</html>

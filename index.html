@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Plash Priya Singh ❤️</title>
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* 🔒 LOGIN OVERLAY */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background: #fff0f6;
+    padding: 30px;
+    border-radius: 22px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(255,0,120,0.4);
+    position: relative;
+}
+
+.login-box img {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.login-box h2 {
+    color: #b30059;
+    margin-bottom: 15px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff99cc;
+    outline: none;
+}
+
+.login-box small {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    color: #8b0045;
+    margin-bottom: 5px;
+}
+
+.login-box button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #c2185b;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #a00048;
+}
+
+#error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 26px;
+    color: #b30059;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: #ff0055;
+    transform: scale(1.1);
+}
+
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+    <source src="music/romantic.mp3" type="audio/mpeg">
+</audio>
+
+<div class="main-container">
+    <h1 class="title">Happy Birthday My Queen 👑</h1>
+    <h2 class="subtitle">Plash Priya Singh</h2>
+    <p class="date">2 February 2003</p>
+
+    <div class="card-container">
+
+        <a href="birthday.html" class="card">
+            <h3>🎂 Birthday Special</h3>
+            <p>Tumhari special day, meri special wishes 💖</p>
+        </a>
+
+        <a href="gallery.html" class="card">
+            <h3>📸 Personal Gallery</h3>
+            <p>Har smile, har yaad, har pal ❤️</p>
+        </a>
+
+        <div class="card" onclick="openLogin()">
+            <h3>🛣 Our Journey & My Heart</h3>
+            <p>First day se aaj tak ka safar 💑</p>
+        </div>
+
+    </div>
+    <!-- 🔐 LOGIN MODAL -->
+    <div class="overlay" id="overlay">
+        <div class="login-box">
+            <span class="close-btn" onclick="closeLogin()">×</span>
+            <img src="lock.png" alt="Love Lock" >
+            
+            <h2>Only For You ❤️</h2>
+
+            <input type="text" id="username" placeholder="Username">
+            <small>Hint: Instagram first ID name 😉</small>
+
+            <input type="password" id="password" placeholder="Password">
+            <small>Hint: 2 special dates 💖</small>
+
+            <button onclick="checkLogin()">Enter My Heart 💌</button>
+
+            <p id="error"></p>
+            
+
+        </div>
+    </div>
+
+    <footer>
+        <p>With endless love, <br> — Omesh Sehrawat 💌</p>
+    </footer>
+</div>
+<script>
+function openLogin() {
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function checkLogin() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
+    if (user === "oslppss" && pass === "1002") {
+        window.location.href = "journey.html";
+    } else {
+        error.innerText = "Wrong credentials 😔 Try again my love.";
+    }
+}
+function closeLogin() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("error").innerText = "";
+}
+document.getElementById("overlay").addEventListener("click", function(e) {
+    if (e.target === this) closeLogin();
+});
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

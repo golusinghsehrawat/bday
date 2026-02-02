@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Memories 📸</title>
+
+<style>
+body {
+    background: linear-gradient(to bottom, #ffd1dc, #ffe6f0);
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #b30059;
+    margin-top: 40px;
+}
+
+/* IMAGE GALLERY */
+.gallery-grid {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    padding: 0 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255,0,120,0.25);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* VIDEO MEMORIES */
+.video-grid {
+    max-width: 900px;
+    margin: 30px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.video-card {
+    background: rgba(255,255,255,0.6);
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(255,0,120,0.2);
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 14px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lightbox img {
+    width: auto;
+    height: auto;
+    max-width: 95vw;
+    max-height: 95vh;
+    min-width: 40vw;
+    min-height: 50vh;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+
+
+/* BACK */
+.back {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.back a {
+    text-decoration: none;
+    color: #c2185b;
+    font-weight: bold;
+}
+.promise-section {
+    max-width: 900px;
+    margin: 60px auto 40px;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(255,0,120,0.25);
+}
+
+.promise-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.promise-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(255,0,120,0.25);
+}
+
+.promise-section h3 {
+    color: #b30059;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.promise-images img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.promise-images img:hover {
+    transform: scale(1.07);
+}
+#musicBtn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 9999;
+
+    background: #b30059;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(179, 0, 89, 0.45);
+}
+
+
+
+</style>
+</head>
+
+<body>
+<audio id="bgMusic" loop>
+    <source src="music/fakira.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">⏸ Pause Music</button>
+
+<h1>Our Beautiful Memories 💖</h1>
+
+<!-- 📸 IMAGES -->
+<div class="gallery-grid" id="gallery"></div>
+
+<!-- 🎥 MEMORY VIDEOS -->
+<h2>Some Special Moments 🎥</h2>
+<div class="video-grid" id="memoryVideos"></div>
+<!-- 💌 PROMISE GALLERY -->
+<div class="promise-section">
+    <div class="promise-images">
+        <img src="memories/61.png" onclick="openLightbox(this.src)">
+        <img src="memories/60.png" onclick="openLightbox(this.src)">
+        <img src="memories/59.png" onclick="openLightbox(this.src)">
+        <img src="memories/58.png" onclick="openLightbox(this.src)">
+        <img src="memories/57.png" onclick="openLightbox(this.src)">
+        <img src="memories/56.png" onclick="openLightbox(this.src)">
+    </div>
+
+    <h3>
+        I want to be your strong, independent man<br>
+        who listens to you ❤️
+    </h3>
+</div>
+<div class="promise-section">
+    <h3>
+        Jaan You can from where we have started our journey and now how much we are grown up.
+        Ha bacha ban jata hu jaan tumara samana but maturity bhi ha jaan.
+        Tumana grow hi kiya ha mara sath jab se relationship ma aaya ho and mana bhi kiya ha but difference itna ha mara abhi dikh nahi 
+        raha ha time aana pa dekh jayaga.
+        I seriously want ki ham log ek aur chance de apna relationship ko abhi duriya aa gyi ha and vo 1 month ma thik nahi ho sakti and
+        single person kar bhi nhi payaga, but dono sath ma try karaga to i know 2-3 month laga kam se kam sab thik hona ma phale jaisa hona ma
+        but ham log khush rahaga dekhna jaan, but again jab dono chaiya ma bss apni chiza bata sakta hu, mara side se try kar sakta hu but jab tak
+        tum nahi chauga kuch nahi ho sakta ha jaan, sorry for everything, mara love toda silent tha but abhi sikh raha hu kar raha hu jaan dekh bhi raha 
+        hoga aaga apki marji ❤️❤️❤️❤️❤️❤️❤️<br><br><br>
+        Jaan ek aur chiz jo bola ha muja sex nahi chaiye i want your hugs and other ma life time tuma uska liya kabhi boluga bhi nahi na karuga tumara bola bagar
+        plash sorry aager mari vo chiza bakar lagi ho to really sorry and videos ma mana iska bhi reason diya kyu karta tha all, once again sorry jaan.
+    </h3>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg">
+</div>
+
+<script>
+    const images = [
+        { src: "memories/1.png", text: "My First Dark Chocolate And Till Now❤️" }, 
+        { src: "memories/2.png", text: "Our First Meeting 💖" },
+        { src: "memories/3.png", text: "Our First Meeting 💖" },
+        { src: "memories/4.png", text: "Our First Meeting 💖" },
+        { src: "memories/5.png", text: "Our happy moment ✨" },
+        { src: "memories/6.png", text: "Our happy moment ✨" },
+        { src: "memories/7.png", text: "First time hold your hand ✨" },
+        { src: "memories/8.png", text: "Our Personal Space ✨" },
+        { src: "memories/9.png", text: "Luch Togther❤️" },
+        { src: "memories/10.png", text: "Ring Exchange ❤️" },
+        { src: "memories/11.png", text: "I want this ❤️" },
+        { src: "memories/12.png", text: "And This nothing else not even S** ❤️" }
+        // add only captions where you want
+    ];
+
+    images.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "img-card";
+
+        card.innerHTML = `
+            <img src="${item.src}" onclick="openLightbox('${item.src}')">
+            ${item.text ? `<p>${item.text}</p>` : ""}
+        `;
+
+        document.getElementById("gallery").appendChild(card);
+    });
+    // ===== IMAGES =====
+    const imageCount = 55;   // change anytime
+    for (let i = 13; i <= imageCount; i++) {
+        const img = document.createElement("img");
+        img.src = `memories/${i}.png`;
+        img.onclick = () => openLightbox(img.src);
+        document.getElementById("gallery").appendChild(img);
+    }
+
+    //===== VIDEOS =====
+    const memoryVideoCount = 8;  // add as many as you want
+    for (let i = 1; i <= memoryVideoCount; i++) {
+        const card = document.createElement("div");
+        card.className = "video-card";
+        card.innerHTML = `
+            <video controls>
+                <source src="vmemories/${i}.mp4" type="video/mp4">
+            </video>
+        `;
+        document.getElementById("memoryVideos").appendChild(card);
+    }
+
+    // Lightbox functions
+    function openLightbox(src) {
+        document.getElementById("lightboxImg").src = src;
+        document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+    const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let musicStarted = false;
+
+// ▶️ Start music on first click anywhere
+document.addEventListener("click", function startMusicOnce() {
+    if (!musicStarted) {
+        music.play().catch(() => {});
+        musicStarted = true;
+    }
+}, { once: true });
+
+// ⏸ Play / Pause button
+musicBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (music.paused) {
+        music.play();
+        musicBtn.innerText = "⏸ Pause Music";
+    } else {
+        music.pause();
+        musicBtn.innerText = "▶️ Play Music";
+    }
+});
+
+// 🎥 Auto pause music when ANY video plays
+document.addEventListener("play", function (e) {
+    if (e.target.tagName === "VIDEO") {
+        music.pause();
+        musicBtn.innerText = "▶️ Play Music";
+    }
+}, true);
+
+// ▶️ Resume music when video pauses or ends
+document.addEventListener("pause", function (e) {
+    if (e.target.tagName === "VIDEO") {
+        music.play().catch(() => {});
+        musicBtn.innerText = "⏸ Pause Music";
+    }
+}, true);
+
+document.addEventListener("ended", function (e) {
+    if (e.target.tagName === "VIDEO") {
+        music.play().catch(() => {});
+        musicBtn.innerText = "⏸ Pause Music";
+    }
+}, true);
+</script>
+
+<div class="back">
+    <a href="journey.html">⬅ Back to Journey</a>
+</div>
+
+</body>
+</html>
