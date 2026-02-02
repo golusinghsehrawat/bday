@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Will You Be Mine Forever? 💍</title>
+<link rel="icon" type="image/png" href="7.png">
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #ffafbd, #ffc3a0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: float 6s linear infinite;
+    opacity: 0.6;
+}
+@keyframes float {
+    0% {transform: translateY(100vh);}
+    100% {transform: translateY(-10vh);}
+}
+
+.box {
+    width: 90%;
+    max-width: 650px;
+    background: rgba(255,255,255,0.95);
+    padding: 50px 40px;
+    border-radius: 35px;
+    text-align: center;
+    box-shadow: 0 30px 70px rgba(255,0,90,0.4);
+    position: relative;
+}
+
+h1 {
+    font-size: 34px;
+    color: #d1005c;
+}
+
+p {
+    font-size: 22px;
+    margin: 25px 0;
+    color: #444;
+}
+
+.buttons {
+    position: relative;
+    height: 120px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 16px 36px;
+    font-size: 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#yesBtn {
+    background: linear-gradient(135deg, #ff4b7d, #ff0066);
+    color: white;
+    box-shadow: 0 10px 25px rgba(255,0,90,0.4);
+}
+
+#noBtn {
+    background: #eee;
+    color: #333;
+    position: absolute;
+    left: 280px;
+}
+
+#message {
+    display: none;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #b30059;
+    animation: pop 1s ease;
+}
+
+@keyframes pop {
+    from {opacity: 0; transform: scale(0.7);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+/* Music button */
+.music-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Back button */
+.back {
+    margin-top: 30px;
+}
+.back a {
+    text-decoration: none;
+    color: #d1005c;
+    font-weight: bold;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background hearts -->
+<script>
+for (let i = 0; i < 20; i++) {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerText = "💖";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.animationDuration = 4 + Math.random() * 4 + "s";
+    document.body.appendChild(h);
+}
+</script>
+
+<audio id="bgMusic" loop>
+    <source src="raabta.mp3" type="audio/mpeg">
+</audio>
+
+<div class="box">
+    <div class="music-btn" onclick="toggleMusic()">🎵</div>
+
+    <h1>Plash Priya Singh 💕</h1>
+    <p>
+        Tum meri zindagi ka sabse khoobsurat hissa ho.<br>
+        Aaj ek sawaal hai…<br><br>
+        <strong>Will you be mine forever? 💍</strong>
+    </p>
+
+    <div class="buttons">
+        <button id="yesBtn">YES 💖</button>
+        <button id="noBtn">NO 😏</button>
+    </div>
+
+    <div id="message">
+        💕 She said YES!!! 💍😍<br>
+        Thank you for choosing me.<br>
+        I promise — always & forever ❤️
+    </div>
+
+    <div class="back">
+        <a href="journey.html">⬅ Back to Our Journey</a>
+    </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const msg = document.getElementById("message");
+const music = document.getElementById("bgMusic");
+let musicStarted = false;
+
+/* 🎵 FIRST CLICK ANYWHERE STARTS MUSIC */
+document.addEventListener("click", function startMusicOnce() {
+    if (!musicStarted) {
+        music.play().catch(() => {});
+        musicStarted = true;
+        document.removeEventListener("click", startMusicOnce);
+    }
+});
+
+/* NO BUTTON RUNS AWAY */
+noBtn.addEventListener("mouseenter", () => {
+    noBtn.style.left = Math.random() * 400 + "px";
+    noBtn.style.top = Math.random() * 60 + "px";
+});
+
+/* YES BUTTON */
+yesBtn.addEventListener("click", () => {
+    yesBtn.style.transform = "scale(1.6)";
+    noBtn.style.display = "none";
+    msg.style.display = "block";
+    music.play();
+});
+
+/* 🎵 MUSIC CONTROL BUTTON */
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+</script>
+
+
+</body>
+</html>
