@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Our Memories 📸</title>
+<link rel="icon" type="image/png" href="4.png">
 
 <style>
 body {
@@ -155,6 +156,17 @@ h1, h2 {
     box-shadow: 0 8px 20px rgba(179, 0, 89, 0.45);
 }
 
+.video-card iframe {
+    width: 100%;
+    height: 480px;
+    border-radius: 14px;
+    border: none;
+}
+@media (max-width: 600px) {
+    .video-card iframe {
+        height: 420px;
+    }
+}
 
 
 </style>
@@ -162,7 +174,7 @@ h1, h2 {
 
 <body>
 <audio id="bgMusic" loop>
-    <source src="music/fakira.mp3" type="audio/mpeg">
+    <source src="fakira.mp3" type="audio/mpeg">
 </audio>
 
 <button id="musicBtn">⏸ Pause Music</button>
@@ -249,18 +261,31 @@ h1, h2 {
         document.getElementById("gallery").appendChild(img);
     }
 
-    //===== VIDEOS =====
-    const memoryVideoCount = 8;  // add as many as you want
-    for (let i = 1; i <= memoryVideoCount; i++) {
+    // ===== GOOGLE DRIVE VIDEOS =====
+    const driveVideos = [
+        "1wZNXWrPFM4wqrNOX0_jV_TDi_AhQpf-c",
+        "1xAz5fexT3Zwpvmt_NRAeoIO1fMucrbwR",
+        "1uCbc4wE5BOHl2TJTdzQ3rc3wPwvAhuH3",
+        "1_3fNYzxy5vUVpasDMFSHvGSAoOEKA7pI",
+        "1azsi_-xyL2C1vajAYAFYXj2QioHjc4G-",
+        "1vU0Ba2KrjUw4pvqE2Svc89goSsB5Jo_H",
+        "1jfwAB6KMTWrgCgJNv1kNv1JYbjNzm6fh",
+        "14unT5A2Wov-DnVARaSUh8PSsR2hAAwkO"
+    ];
+
+    driveVideos.forEach(id => {
         const card = document.createElement("div");
         card.className = "video-card";
         card.innerHTML = `
-            <video controls>
-                <source src="vmemories/${i}.mp4" type="video/mp4">
-            </video>
+            <iframe
+                src="https://drive.google.com/file/d/${id}/preview"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                style="width:100%; height:480px; border-radius:14px; border:none;">
+            </iframe>
         `;
         document.getElementById("memoryVideos").appendChild(card);
-    }
+    });
 
     // Lightbox functions
     function openLightbox(src) {

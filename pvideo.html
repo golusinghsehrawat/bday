@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>My Messages For You 🎥</title>
-
+<link rel="icon" type="image/png" href="5.png">
 <style>
 body {
     background: linear-gradient(to bottom, #ffd1dc, #ffe6f0);
@@ -28,9 +28,24 @@ h1 {
 .video-card {
     background: rgba(255,255,255,0.6);
     border-radius: 18px;
-    padding: 15px;
     box-shadow: 0 8px 20px rgba(255,0,120,0.2);
+    overflow: hidden;   /* IMPORTANT */
 }
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16; /* perfect for vertical videos */
+    background: black;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 
 .video-card video {
     width: 100%;
@@ -51,6 +66,18 @@ h1 {
 .video-card video {
     cursor: pointer;
 }
+.video-card iframe {
+    width: 100%;
+    height: 480px;
+    border-radius: 14px;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .video-card iframe {
+        height: 420px;
+    }
+}
 
 </style>
 </head>
@@ -62,31 +89,61 @@ h1 {
 <div class="video-grid" id="videos"></div>
 
 <script>
-const videoCount = 35; // change anytime
+const driveVideoIds = [
+"1H_wBvrc1uMyP7iyfBwBPVYxndjo2FOyN",
+"1SVYRNmETco9e1ne8pcVh2HmMLEcVYjzh",
+"13aQ1lqYcDR33HhcRDiJdeligM7aI6aKm",
+"1EMts9Jk99ue3h6OOrGSOHdLMqnJphfMA",
+"1d65wV5QB7s1aG0zYkRoH_eujdzsu5USR",
+"1e_zvGIJZLtndQB4mShQTkg65lGk0mahT",
+"1HBxChyay33NvPG9UM4yMuLP2iCdIfWCT",
+"1qk0mCVu2Un4Zi5n-IcaxffG-LzkHIUvQ",
+"1Zfb7kw8ni7GaEgMLnlSbEQmIiR9lCNgN",
+"1ksQnHooP_dFWYwmq_SJCLkWrtsOib7PT",
+"1Eg5Swey28p21wLp1p0F7cXeJ4nK7067q",
+"13NI5xynDh4CEfgsWUSyFj5i3YxFJ9ySt",
+"11ebhDbDMXmoT6qtCPSPpyaf4smGxfFpK",
+"1xLrDID9iZ5r1WHGeXZA7Ys1QJSbFiVDE",
+"1zIctSStrGxbPkka6SkddsPcageQZVKYz",
+"1lMUtFW1NvEKtLtdnEs03TeRdfUY0Nowj",
+"1J4zO7Lw8W3oOjqgOWHcnJpi-FRV_-NK0",
+"1Ls97SzjGb5mDMlVDTqPYo_lrjvEUNxt1",
+"1tY9S0cSZxhz2O2b4ZLordSDbVcijj-Ny",
+"1j5PacyX90L_qAbvJUjpAinT_tQsaO12O",
+"1X9l4H1IkHB5_HKlv3wuyCKybGra21fk-",
+"1KUYYNX5_t7pY6FiPaB34mVXHtMoQUpBM",
+"1uZaS5iOBtJ287IczfHQmop7RZgOEn-59",
+"1mIvo-c103hGEGtWgq7a0hJQaMIAgmkhM",
+"1QObn6zIKoSwCCGRp-bz8Z8YEeNtSuGoc",
+"1BKC-EPs4rUaww9pOt6NDpUZRrM2ASR2x",
+"1TTPjWzWCsaTp0ieG0UuurauIa_3tJD_5",
+"1rAUUNv-fOwgVFIfFYLLmbikOi44aYyhs",
+"1RLjaXl4im6oA21ETb69hEXMcmR-j7N3G",
+"1Z3_TkFREL8ye4loasIaz95ze1tnlPWPT",
+"1A1gWABPPlQ-JAp4WfKSc1fyug_4sYiMZ",
+"1KvxS71NVEyqn-Ika_D6LV7iMz88CpP5t",
+"126ABSZbWVm7TlNtecoPdxo7sjDygL7hK",
+"1LQR2cdm06GUc6pjF9vAvf-LI7Eu9X2uS",
+"19QcM8yINQa8YEsFqmBoZrxLVLMWjfFVK"
+];
 
-for (let i = 1; i <= videoCount; i++) {
+driveVideoIds.forEach(id => {
     const card = document.createElement("div");
     card.className = "video-card";
 
-    const video = document.createElement("video");
-    video.src = `pvideos/${i}.mp4`;
-    video.controls = true;
+    card.innerHTML = `
+    <div class="video-wrapper">
+        <iframe
+            src="https://drive.google.com/file/d/${id}/preview"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+`;
 
-    // 👉 CLICK = FULLSCREEN + PLAY
-    video.addEventListener("click", () => {
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen(); // Safari
-        } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen(); // IE
-        }
-        video.play();
-    });
 
-    card.appendChild(video);
     document.getElementById("videos").appendChild(card);
-}
+});
 </script>
 
 

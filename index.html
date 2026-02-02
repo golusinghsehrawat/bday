@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>For Plash Priya Singh ❤️</title>
+    <link rel="icon" type="image/png" href="1.png">
     <link rel="stylesheet" href="css/style.css">
 
 <style>
@@ -92,13 +93,36 @@
     transform: scale(1.1);
 }
 
+#musicBtn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 9999;
+
+    background: #c2185b;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(194, 24, 91, 0.45);
+}
+
+#musicBtn:hover {
+    background: #a00048;
+}
+
 </style>
 </head>
 <body>
 
-<audio autoplay loop>
-    <source src="music/romantic.mp3" type="audio/mpeg">
+<audio id="bgMusic" loop preload="auto">
+    <source src="jina.mp3" type="audio/mpeg">
 </audio>
+
+<button id="musicBtn">▶️ Play Music</button>
 
 <div class="main-container">
     <h1 class="title">Happy Birthday My Queen 👑</h1>
@@ -171,6 +195,33 @@ function closeLogin() {
 }
 document.getElementById("overlay").addEventListener("click", function(e) {
     if (e.target === this) closeLogin();
+});
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let musicStarted = false;
+
+// ▶️ Start music on first click anywhere
+document.addEventListener("click", function startMusicOnce() {
+    if (!musicStarted) {
+        music.volume = 0.8;
+        music.play().catch(() => {});
+        musicBtn.innerText = "⏸ Pause Music";
+        musicStarted = true;
+    }
+}, { once: true });
+
+// ▶️ Play / Pause button
+musicBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (music.paused) {
+        music.play();
+        musicBtn.innerText = "⏸ Pause Music";
+    } else {
+        music.pause();
+        musicBtn.innerText = "▶️ Play Music";
+    }
 });
 </script>
 
